@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/styles.cadastro.css">
+    <script src="/js/eye-view.js" defer></script>
+</head>
+<body>
+    <div class="background-video-cadastro">
+        <video autoplay loop muted plays-inline class="cadastro-cloud">
+            <source src=assets/sunset-telacadastro.webm type="video/webm">
+            
+        </video>
+    </div>
+
+    <div class="container">
+
+        <div class="card-cadastro">
+            <h1>Cadastre-se aqui:</h1>
+
+            <div class="label-float-cadastro">
+                <input type="text" id="nome" placeholder="" required>
+                <label for="nome"> Nome Completo</label>
+
+            <div class="label-float-cadastro">
+                <input type="text" id="email" placeholder="" required> <!-- o "required" é necessário para fazer o focus da label-float-->
+                <label for="email"> E-mail</label>
+                
+            <div class="label-float-cadastro">
+                <input type="text" id="usuario" placeholder="" required>
+                <label for="usuario"> Usuário</label>
+                 
+            <div class="label-float-cadastro">
+                <input type="password" id="senha" placeholder="" required>
+
+                <label for="senha">Senha</label>
+                <i id="versenha" class="fa fa-eye" aria-hidden="true"></i>
+
+            <div class="label-float-cadastro">
+                <input type="password" id="ConfirmSenha" placeholder="" required>   
+
+                <label for="confirmsenha">Confirmar senha</label>
+                <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
+    </div>
+
+    <div class="botao-cadastro">
+        <button> Cadastrar </button>
+    </div>
+
+</body>
+</html>

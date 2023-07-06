@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300&family=Fjalla+One&family=Fugaz+One&display=swap');
+
+:root {                                                                                 /* Aqui estou definindo uma diretório de cor dos principais elementos da pagina, quando qiser trocar basta alterar apenas aqui, para ser atribuido em todos os elementos que o diretório correponde. PASSOS FINAIS DO PROJETO */
+    --cor-primeira: #8B1874;
+    --cor-segunda: #F79540;
+    --cor-teceira: #E49A80;
+    --cor-quarta: aliceblue;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+body {
+   
+    /* A parte do código referente ao background-image foi alterada para o video, qualquer dúvida revise no codepen. */
+}
+
+/* ADICIONEI UMA NOVIDADE NO EXERCÍCIO, ALÉM DE APRENDER UMA ÓTIMA FERRAMENTA VISUAL. */
+
+ .cadastro-cloud { /*Isso aqui deu trabalho viu, pelo video estar na resolucao 4k, natualmente ele veio desposicionado, tive que definir a w & h equivalente ao tamanho de fullhd.  Alem de mexer com o posicionamento left. */
+
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    right: 0;
+    left: -100px;
+    bottom: 0;
+    z-index: -1;
+    width: 1920px;
+    height: 1080px;
+  
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+}
+    }
+    
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+         width: auto;
+         height: 100%;    
+    }
+ }
+
+ /* CONTIUANDO... */ 
+
+ .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.card-cadastro {
+    background-color: #fffff135;
+    box-shadow: 4px 3px 1px 0px #00000070;   
+    padding: 30px;
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 28px;
+    color: var(--cor-primeira) /* Para declarar a variavel/ diretorio, basta apagar codigo hexixadeci (pois ele já foi declarado lá em cima no :root) e declare " var(aqui vai aparecer o nome que escolheu do diretorio). PASSOS FINAIS DO PROJETO */
+}
+ 
+.botao-cadastro {
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    background-color: transparent;
+    border-color: var(--cor-segunda);
+    color: var(--cor-segunda);
+    padding: 7px; 
+    font-weight: bold;
+    font-size: 12pt;
+    margin-top: 20px;
+    border-radius: 0;
+    cursor: pointer;
+    outline: none; 
+    transition: all .4s ease-out;
+}
+button:hover{
+    background-color: var(--cor-teceira);
+    color: var(--cor-quarta)
+}
+
+.fa-eye {
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    cursor: pointer;
+    color: /* ainda não montei a paleta de cor dessa page, ultimo passo. */;
+}
+
+.label-float-cadastro input {
+    width: 100%;
+    padding: px 3px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid var(--cor-primeira); /* Aqui faz a linha da area de preenchimento, sem notar a caixa de seleção. */
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-family:'Bellota', cursive;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+.label-float-cadastro {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.label-float-cadastro input:focus {
+    border-bottom: 2px solid #EEDF85;
+}
+
+.label-float-cadastro label {
+    color: var(--cor-segunda);
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+}
+.label-float-cadastro input:focus + label,
+.label-float-cadastro input:valid + label { 
+    /*Aqui estou dizendo ao codigo que quando eu sair do foco (parar de digitar) a label se matenha no lugar fixo, e nao retorne para linha. */
+    font-size: 13px;
+    margin-top: 0;
+    color: #a92844;
+}
+ 
